@@ -3,9 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>Leemtech</title>
 <link rel="stylesheet" href="style.css">
 <script src="index.js" defer></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Rgn7Diwvj42tahJGg",
+      });
+   })();
+</script>
 </head>
 <body>
 <div class="header">
@@ -539,7 +549,7 @@ construction.
 <p class="more_fq">
     Still have questions?
 </p>
-<button class="contact_bth"><a href="#" class="contact_a">Contact Our Team</a></button>
+<button class="contact_bth"><a href="#contact" class="contact_a">Contact Our Team</a></button>
 </div>
 </div>
 <!--  -->
@@ -574,7 +584,7 @@ help you with your project needs.
   <p>Message</p>
   <input class="msg_input" type="text" name="" id="" placeholder="How can we help you?">
 </div>
-<button class="bth_send_mgs">Send Message</button>
+<button class="bth_send_mgs" onclick="sendMail()">Send Message</button>
 </div>
   </div>
   <!-- info -->
@@ -599,6 +609,9 @@ Sales: (234) 080-365-277-62
 <br>
 Support: (234) 081-368-280-54
 </p>
+<a class="location_p" href="https://wa.me/2348038527762?text=Hello%20Leemtech%2C%20I%27m%20here%20to%20make%20an%20enquiry" target="_blank">
+  Chat with us on WhatsApp
+</a>
 </h4>
     </div>
     <div class="mail">
@@ -632,7 +645,7 @@ Sunday: Closed
 Need a customized solution for your project? Contact our sales team for a
 detailed quote tailored to your specific requirements.
 </p>
-<button class="a_q_bth">Request a Quote</button>
+<button class="a_q_bth" >Request a Quote</button>
   </div>
 </div>
 </div>
@@ -657,11 +670,11 @@ detailed quote tailored to your specific requirements.
 <div class="block">
   <h3 class="link_">Our Product</h3>
   <ul>
-    <li><a href="#home"  class="Header_cont">Home</a></li>
-<li><a href="#about" class="Header_cont">About</a></li>
-<li><a href="#products" class="Header_cont">Products</a></li>
-<li><a href="#solutions" class="Header_cont">Building Solutions</a></li>
-<li><a href="#contact" class="Header_cont">Contact</a></li>
+    <li><a href="#products"  class="Header_cont">Insulation Panels</a></li>
+<li><a href="#products" class="Header_cont">Packaging Solutions</a></li>
+<li><a href="#products" class="Header_cont">Decorative Moldings</a></li>
+<li><a href="#solutions" class="Header_cont">ICF Systems</a></li>
+<li><a href="#solutions" class="Header_cont">Structural Insulated Panels</a></li>
   </ul>
 </div>
 <div class="block">
@@ -672,6 +685,15 @@ detailed quote tailored to your specific requirements.
     <button class="Subscribe_bth">Subscribe</button>
   </div>
   <p>By subscribing you agree to our Privacy Policy.</p>
+</div>
+ </div>
+ <div class="footer-bottom">
+  <p>© 2025 Leemtech. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy-policy.html" target="_self">Privacy Policy</a>
+    <a href="terms.html" target="_self">Terms & Condition</a>
+    <a href="#">Sitemap</a>
+  </div>
 </div>
  </div>
 </body>
