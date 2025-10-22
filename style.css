@@ -1110,7 +1110,10 @@ text-align: center;
 .a_q_bth:hover {
   background-color: #083a64;
 }
-
+.a_q_bthh{
+   color: #fff;
+   font-size: 0.85rem;
+}
 @media (max-width: 768px) {
   .request_quot {
     width: 95%;
