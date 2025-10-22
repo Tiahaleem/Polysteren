@@ -122,7 +122,6 @@ function sendMail() {
   const subject = document.querySelector('.sub_input').value.trim();
   const message = document.querySelector('.msg_input').value.trim();
 
-  // Check if any field is empty
   if (!name || !email || !subject || !message) {
     showPopup("⚠️ Please fill in all fields before sending.");
     return;
@@ -130,18 +129,24 @@ function sendMail() {
 
   const params = {
     from_name: name,
-    email_id: email,
+    from_email: email,
     subject: subject,
     message: message
   };
 
-  const serviceID = "service_237hk2c";  
-  const templateID = "template_d0krvlw"; 
+  const serviceID = "service_2tq5gqe";
+  const templateID = "template_ltt1edt"; // main contact form
+  const autoReplyTemplateID = "template_autoreply"; // your new one
 
+  // Send message to you
   emailjs.send(serviceID, templateID, params)
     .then(() => {
       showPopup("✅ Email sent successfully!");
-      
+
+      // Send auto-reply to the sender
+      emailjs.send(serviceID, autoReplyTemplateID, params);
+
+      // Clear form
       document.querySelector('.name_txt').value = "";
       document.getElementById('email_inp').value = "";
       document.querySelector('.sub_input').value = "";
@@ -152,6 +157,8 @@ function sendMail() {
       showPopup("❌ Failed to send email. Please try again.");
     });
 }
+
+
 
 function showPopup(message) {
   const popup = document.createElement('div');
