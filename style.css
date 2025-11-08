@@ -31,15 +31,23 @@ background: transparent;
 transition: background 0.3s ease, box-shadow 0.3s ease;
 z-index: 1000;
 }
-/* 
+/* MENU BUTTON */
 .menu-toggle {
-display: none;
-font-size: 28px;
-background: none;
-border: none;
-cursor: pointer;
-color: rgb(12, 60, 102);
-} */
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: rgb(12, 60, 102);
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
 
 .header.scrolled {
 background: white;
@@ -94,7 +102,7 @@ display: block;
 }
 
 /* Added dark overlay to improve text contrast */
-/* .home_page_overlay {
+.home_page_overlay {
 position: absolute;
 top: 0;
 left: 0;
@@ -102,7 +110,7 @@ width: 100%;
 height: 100%;
 background: rgba(0, 0, 0, 0.35);
 z-index: 1;
-} */
+}
 
 /* Unified text container so elements scale naturally */
 .home_text_container {
