@@ -6,28 +6,20 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-const toggleBtn = document.querySelector('.menu-toggle');
-  const headerContext = document.querySelector('.header_context');
-  const icon = toggleBtn.querySelector('i');
-  const navLinks = document.querySelectorAll('.Header_cont');
+// Header scroll background
+// window.addEventListener("scroll", function () {
+//   const header = document.querySelector(".header");
+//   header.classList.toggle("scrolled", window.scrollY > 50);
+// });
 
-  // Toggle menu open/close
-  toggleBtn.addEventListener('click', () => {
-    headerContext.classList.toggle('active');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-  });
+// // Mobile menu slide-down
+// const toggleBtn = document.querySelector(".menu-toggle");
+// const navMenu = document.querySelector(".header_context");
 
-  // Close menu when a nav link is clicked (on mobile)
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (headerContext.classList.contains('active')) {
-        headerContext.classList.remove('active');
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
-      }
-    });
-  });
+// toggleBtn.addEventListener("click", () => {
+//   navMenu.classList.toggle("show");
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const leftItems = document.querySelectorAll(
     ".Concrete_form, .Insulated_form, .Polystyrene_form, .Blocks_form"
