@@ -1531,12 +1531,11 @@ img, video {
 }
 
 @media (max-width: 480px) {
-  .About_Leemtech_Context {
-    flex-direction: column;
-    text-align: center;
+  .menu-toggle {
+    display: block !important;
+    z-index: 2000;
+    position: relative; /* or absolute/fixed depending on your header layout */
   }
-}
-
 
 /* @media (max-width: 768px) {
   .menu-toggle {
